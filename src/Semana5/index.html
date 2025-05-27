@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Laboratorio 05A - Framework JS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Laboratorio 05A: Desarrollo Front-End con Framework JS</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Estructura y operación de Framework - Client Side Rendering</h2>
+      <p>Los frameworks como React, Vue o Angular utilizan <strong>Client Side Rendering (CSR)</strong>, lo que significa que el navegador se encarga de renderizar el contenido a partir de JavaScript sin recargar la página completa. El contenido se genera dinámicamente en el cliente.</p>
+    </section>
+
+    <section>
+      <h2>2. Gestión de dependencias y herramientas de creación</h2>
+      <p>Para crear proyectos con frameworks modernos, se utilizan herramientas como:</p>
+      <ul>
+        <li><code>npm</code> o <code>yarn</code>: gestores de paquetes.</li>
+        <li><code>Vite</code>, <code>Create React App</code>, <code>Vue CLI</code>: inicializadores de proyectos.</li>
+        <li><code>Webpack</code>: herramienta de empaquetado.</li>
+      </ul>
+      <pre><code>npx create-react-app mi-app
+cd mi-app
+npm start</code></pre>
+    </section>
+
+    <section>
+      <h2>3. Componentes, JSX, Props y Children</h2>
+      <p>Los frameworks dividen la UI en componentes reutilizables.</p>
+      <pre><code>// Componente padre
+function App() {
+  return <Mensaje texto="Hola desde Props">Soy un hijo</Mensaje>;
+}
+
+// Componente hijo
+function Mensaje(props) {
+  return (
+    <div>
+      <p>{props.texto}</p>
+      <strong>{props.children}</strong>
+    </div>
+  );
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>4. Estilos en Frameworks JS</h2>
+      <ul>
+        <li><strong>Inline Styles:</strong> <code>&lt;div style={{ color: 'red' }}&gt;</code></li>
+        <li><strong>Style Sheets:</strong> Importar CSS normal con <code>import './App.css'</code></li>
+        <li><strong>CSS Modules:</strong> Archivos como <code>styles.module.css</code> con nombres locales.</li>
+        <li><strong>Styled Components:</strong> Estilo escrito en JS con librerías como styled-components.</li>
+        <li><strong>Framework CSS:</strong> Como Tailwind CSS.</li>
+      </ul>
+    </section>
+
+    <div class="button-container">
+      <a href="ejemplo-props.html" class="boton">Ejemplo con Props y Children</a>
+      <a href="ejemplo-styles.html" class="boton">Ejemplo de Estilos</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 </p>
+  </footer>
+</body>
+</html>

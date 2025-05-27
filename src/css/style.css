@@ -1,0 +1,278 @@
+/* -----------------------------------
+   ESTILOS GENERALES (aplican a todo el sitio)
+----------------------------------- */
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif; /* Fuente general */
+  background-color: #fff5f8;         /* Color de fondo pastel */
+  color: #333;                       /* Color de texto general */
+  scroll-behavior: smooth;           /* Desplazamiento suave al hacer clic en enlaces */
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif; /* Fuente decorativa para títulos */
+  color: #c46aa5;                          /* Color rosado para destacar */
+}
+
+/* -----------------------------------
+   SECCIÓN HERO (Presentación principal)
+----------------------------------- */
+.hero {
+  background: linear-gradient(135deg, #ffe4ec, #f7d9f7); /* Fondo degradado suave */
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.foto-perfil {
+  width: 300px;
+  border-radius: 50%;      /* Imagen redonda */
+  margin-bottom: 1rem;
+}
+
+.contenido-hero h1 {
+  font-size: 2.5rem;
+}
+
+.btn {
+  background-color: #c46aa5;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* -----------------------------------
+   SECCIONES GENERALES (Sobre mí, Proyectos, Contacto)
+----------------------------------- */
+section {
+  padding: 3rem 2rem;
+  scroll-margin-top: 80px; /* Compensa el header fijo */
+}
+
+#sobre-mi, #proyectos-clase, #proyectos-adicionales, #contacto {
+  background-color: #fff0f5; /* Fondo ligeramente rosado para diferenciar secciones */
+}
+
+h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.sobre-mi-contenido {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.sobre-mi-contenido p {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* -----------------------------------
+   SECCIÓN DE PROYECTOS
+----------------------------------- */
+.proyectos-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive */
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(200, 150, 180, 0.1); /* Sombra suave */
+  text-align: center;
+}
+
+.card a {
+  color: #c46aa5;
+  font-weight: bold;
+  text-decoration: none;
+}
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.proyecto-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(200, 150, 180, 0.1);
+}
+
+.proyecto-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.proyecto-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.proyecto-info h3 {
+  color: #c46aa5;
+  margin-bottom: 0.5rem;
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* -----------------------------------
+   SECCIÓN DE CONTACTO
+----------------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 1rem;
+}
+
+form input, form textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #c46aa5;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* -----------------------------------
+   REDES SOCIALES (links en la sección de contacto)
+----------------------------------- */
+.redes {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.redes a {
+  margin: 0 1rem;
+  color: #c46aa5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* -----------------------------------
+   PIE DE PÁGINA
+----------------------------------- */
+footer {
+  background-color: #c46aa5;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* -----------------------------------
+   MENÚ DE NAVEGACIÓN (header fijo en la parte superior)
+----------------------------------- */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #fff0f5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra suave */
+  z-index: 1000; /* Permanece encima del resto */
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #c46aa5;
+  font-family: 'Playfair Display', serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #c46aa5;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Efecto al pasar el mouse o al hacer clic */
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #a84597;
+}
+
+/* Línea decorativa debajo del enlace activo */
+.nav-links li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #a84597;
+  border-radius: 2px;
+}
+
+/* -----------------------------------
+   SECCIÓN DE HABILIDADES
+----------------------------------- */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.skills li {
+  background-color: #ffe6f0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #c46aa5;
+  font-weight: bold;
+}
+
+/* -----------------------------------
+   DISEÑO RESPONSIVO (para móviles)
+----------------------------------- */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem; /* Ajusta el título principal */
+  }
+}

@@ -1,0 +1,65 @@
+/* Fuente elegante y colores pasteles */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fef6f9;
+  color: #4b3c40;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #fcddec;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 3px solid #f5b3c1;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #a04f66;
+}
+
+.intro {
+  font-style: italic;
+  color: #7a3e4b;
+  margin-top: 0.5rem;
+}
+
+main {
+  padding: 2rem 3rem;
+}
+
+section {
+  background-color: #ffffff;
+  border-left: 5px solid #f8b9d4;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+section h2 {
+  color: #b85c74;
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.8rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #fcddec;
+  color: #7a3e4b;
+  border-top: 2px solid #f5b3c1;
+  font-size: 0.9rem;
+}

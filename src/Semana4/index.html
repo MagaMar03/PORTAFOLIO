@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript y TypeScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Desarrollo Front-End con JavaScript y TypeScript</h1>
+    <p class="subtitulo">Laboratorio 04: Desarrollo de una animación con JavaScript</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>¿Qué es JavaScript y TypeScript?</h2>
+      <p><strong>JavaScript</strong> es un lenguaje de programación que permite agregar interactividad a páginas web. <strong>TypeScript</strong> es una versión mejorada de JavaScript con tipado estático.</p>
+    </section>
+
+    <section>
+      <h2>Motores de JavaScript</h2>
+      <p>Los navegadores usan motores para interpretar JS, como <strong>V8</strong> (Chrome) y <strong>SpiderMonkey</strong> (Firefox).</p>
+    </section>
+
+    <section>
+      <h2>Variables y Operadores</h2>
+      <pre><code>// JavaScript
+let nombre = "Ana";
+const edad = 25;
+let activo = true;
+
+// TypeScript
+let nombre: string = "Ana";
+let edad: number = 25;</code></pre>
+    </section>
+
+    <section>
+      <h2>Tipos de Datos</h2>
+      <ul>
+        <li><strong>Número:</strong> <code>let x: number = 10;</code></li>
+        <li><strong>String:</strong> <code>let saludo: string = "Hola";</code></li>
+        <li><strong>Booleano:</strong> <code>let activo: boolean = true;</code></li>
+        <li><strong>Objeto:</strong> <code>let persona = { nombre: "Ana", edad: 22 };</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Estructuras de Control y Bucles</h2>
+      <pre><code>if (edad > 18) {
+  console.log("Mayor de edad");
+} else {
+  console.log("Menor de edad");
+}
+
+for (let i = 0; i < 3; i++) {
+  console.log(i);
+}</code></pre>
+    </section>
+
+    <section>
+      <h2>Funciones</h2>
+      <ul>
+        <li><strong>Declarativa:</strong> <code>function saludar(nombre) { return "Hola " + nombre; }</code></li>
+        <li><strong>Flecha:</strong> <code>const suma = (a, b) => a + b;</code></li>
+        <li><strong>Auto invocada:</strong> <code>(function(){ console.log("Hola") })();</code></li>
+        <li><strong>Closure:</strong> 
+          <pre><code>function contador() {
+  let c = 0;
+  return function() { c++; return c; }
+}
+let incrementar = contador();</code></pre>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>DOM y Canvas</h2>
+      <pre><code>// Cambiar color con JS
+document.getElementById("titulo").style.color = "pink";
+
+// Dibujo en Canvas
+const canvas = document.getElementById("miCanvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "#f9c";
+ctx.fillRect(20, 20, 100, 80);</code></pre>
+    </section>
+
+    <div class="button-container">
+      <a href="index1.html" class="demo-button">Ver ejemplo JavaScript</a>
+      <a href="index2.html" class="demo-button">Ver ejemplo TypeScript</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025.
+  </footer>
+</body>
+</html>

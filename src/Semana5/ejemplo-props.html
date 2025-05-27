@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Props y Children</title>
+</head>
+<body>
+  <h1>Ejemplo con Props y Children</h1>
+  <p>Este es un ejemplo ilustrativo de cómo pasar datos en React usando props y children.</p>
+  <pre>
+  function App() {
+    return &lt;Mensaje texto=\"Hola desde Props\"&gt;Soy un hijo&lt;/Mensaje&gt;;
+  }
+
+  function Mensaje(props) {
+    return (
+      &lt;div&gt;
+        &lt;p&gt;{props.texto}&lt;/p&gt;
+        &lt;strong&gt;{props.children}&lt;/strong&gt;
+      &lt;/div&gt;
+    );
+  }
+  </pre>
+</body>
+</html>

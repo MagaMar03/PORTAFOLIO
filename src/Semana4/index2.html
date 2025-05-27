@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo TypeScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Laboratorio TypeScript</h1>
+  </header>
+
+  <main>
+    <p id="mensaje"></p>
+  </main>
+
+  <script>
+    // Simulación de código TypeScript compilado
+    var nombre = "María";
+    var edad = 28;
+
+    function saludar(nombre) {
+      return "Hola, " + nombre + ". Tienes " + edad + " años.";
+    }
+
+    document.getElementById("mensaje").innerText = saludar(nombre);
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de usuarios</title>
+  <script src="https://cdn.tailwindcss.com "></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+  <div class="bg-white w-full max-w-md p-8 shadow-md border border-gray-200 rounded-md">
+    <!-- Título en negrita -->
+    <h2 class="text-3xl text-center font-semibold mb-6">Registro de usuarios</h2>
+
+    <form novalidate class="space-y-4">
+      <!-- Nombres -->
+      <div class="flex items-center space-x-4">
+        <label for="nombres" class="block text-sm font-semibold text-gray-700 w-32">Nombres *</label>
+        <input type="text" id="nombres" name="nombres" required
+               class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Apellidos -->
+      <div class="flex items-center space-x-4">
+        <label for="apellidos" class="block text-sm font-semibold text-gray-700 w-32">Apellidos *</label>
+        <input type="text" id="apellidos" name="apellidos" required
+               class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Email -->
+      <div class="flex items-center space-x-4">
+        <label for="email" class="block text-sm font-semibold text-gray-700 w-32">Email *</label>
+        <input type="email" id="email" name="email" required
+               class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Confirmar Email -->
+      <div class="flex items-center space-x-4">
+        <label for="confirm-email" class="block text-sm font-semibold text-gray-700 w-32">Confirmar Email *</label>
+        <input type="email" id="confirm-email" name="confirm-email" required
+               class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Usuario -->
+      <div class="flex items-center space-x-4">
+        <label for="usuario" class="block text-sm font-semibold text-gray-700 w-32">Usuario *</label>
+        <input type="text" id="usuario" name="usuario" required
+               class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Contraseña -->
+      <div class="flex items-center space-x-4">
+        <label for="contraseña" class="block text-sm font-semibold text-gray-700 w-32">Contraseña *</label>
+        <input type="password" id="contraseña" name="contraseña" required
+               class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Repetir Contraseña -->
+      <div class="flex items-center space-x-4">
+        <label for="repetir-contraseña" class="block text-sm font-semibold text-gray-700 w-32">Repetir contraseña *</label>
+        <input type="password" id="repetir-contraseña" name="repetir-contraseña" required
+               class="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400">
+      </div>
+
+      <!-- Términos y Condiciones -->
+      <div class="flex items-center mt-4">
+        <input type="checkbox" id="terminos" name="terminos" required
+               class="mt-1 mr-2">
+        <label for="terminos" class="text-sm font-semibold text-gray-700 leading-tight">
+          Acepto los <a href="#" class="text-blue-600 underline">Términos de Licencia</a> y la <a href="#" class="text-blue-600 underline">Política de tratamiento de datos</a>.
+        </label>
+      </div>
+
+      <!-- Botones -->
+      <div class="flex justify-end mt-6 space-x-2">
+        <button type="button" class="bg-red-500 text-white text-sm px-4 py-2 rounded hover:bg-red-600">Cancelar</button>
+        <button type="submit" class="bg-blue-600 text-white text-sm px-4 py-2 rounded hover:bg-blue-700">Registrar</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

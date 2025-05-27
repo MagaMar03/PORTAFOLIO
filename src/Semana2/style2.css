@@ -1,0 +1,111 @@
+/* Tipografía y color base */
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fff0f5;
+  color: #4b3a4d;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #f8c6d8;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 4px solid #f4a8c1;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #5a2a41;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  background-color: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #f4a8c1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+  color: #af4e7a;
+}
+
+code {
+  background-color: #ffe9f2;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #fce0ea;
+  color: #6b4563;
+  margin-top: 2rem;
+}
+
+/* Botón hacia el demo */
+.button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.demo-button {
+  background-color: #f59db0;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.demo-button:hover {
+  background-color: #e67891;
+}
+
+/* Estilo del demo */
+.lab-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.card {
+  background-color: #fdd6e0;
+  padding: 2rem;
+  width: 250px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+  .lab-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
