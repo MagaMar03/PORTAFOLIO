@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio 06A - Teoría</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      padding: 30px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #d16ba5;
+    }
+    .botones {
+      margin-top: 30px;
+    }
+    .botones a {
+      display: inline-block;
+      background-color: #ec98c1;
+      color: white;
+      padding: 12px 20px;
+      margin-right: 15px;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    .seccion {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(233, 150, 172, 0.2);
+      margin-bottom: 25px;
+    }
+      .button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.demo-button {
+  background: linear-gradient(135deg, #f9d5ec, #e0bbf7);
+  color: #7a3e48;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.demo-button:hover {
+  background: linear-gradient(135deg, #e0bbf7, #f9d5ec);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+  </style>
+</head>
+<body>
+  <h1>Eventos, Renderizado y Consumo de API</h1>
+
+  <div class="seccion">
+    <h2>Eventos</h2>
+    <p>Los eventos en React y JavaScript permiten capturar interacciones del usuario, como clics, cambios en formularios o movimientos del mouse. Son fundamentales para hacer que una aplicación sea interactiva. En React, los eventos se manejan con camelCase, como <code>onClick</code> o <code>onChange</code>, y se asocian con funciones.</p>
+    <p>Mediante el uso de funciones controladoras, podemos actualizar el estado de los componentes o ejecutar cualquier lógica deseada. Estos eventos se utilizan en formularios, botones, menús, inputs, etc., y son esenciales para recoger y procesar datos del usuario.</p>
+  </div>
+
+  <div class="seccion">
+    <h2>Renderizado Condicional</h2>
+    <p>El renderizado condicional permite mostrar u ocultar partes de la interfaz en base a condiciones lógicas. Es similar al uso de estructuras condicionales como <code>if</code> o el operador ternario en JavaScript. Esto es útil, por ejemplo, para mostrar mensajes de error, cargar componentes según el rol del usuario o alternar entre diferentes vistas.</p>
+    <p>En React, es habitual ver expresiones como <code>{isLoggedIn ? &lt;Logout /&gt; : &lt;Login /&gt;}</code> que permiten alternar entre componentes dependiendo del estado.</p>
+  </div>
+
+  <div class="seccion">
+    <h2>Renderizado Iterativo</h2>
+    <p>El renderizado iterativo se refiere a la capacidad de mostrar listas de datos de forma dinámica usando estructuras como <code>map</code>. Es común cuando queremos mostrar colecciones como productos, usuarios o mensajes, generando un componente para cada elemento de un array.</p>
+    <p>Esto mejora la reutilización del código y permite que nuestra interfaz se adapte al contenido que reciba. Es muy usado en combinación con datos provenientes de APIs.</p>
+  </div>
+
+  <div class="seccion">
+    <h2>Formularios</h2>
+    <p>Los formularios permiten a los usuarios ingresar datos. En React, se controlan mediante componentes controlados, donde el valor del input está vinculado al estado del componente. Esto facilita validaciones, manipulaciones y envíos de datos.</p>
+    <p>Los formularios en React se manejan usando <code>onChange</code> para capturar cambios y <code>onSubmit</code> para controlar el envío. Se puede integrar validaciones tanto nativas de HTML5 como lógicas adicionales con JavaScript.</p>
+  </div>
+
+  <div class="seccion">
+    <h2>Routing</h2>
+    <p>El routing en aplicaciones React se refiere a la navegación entre diferentes vistas o páginas sin recargar toda la web. Esto se logra usando bibliotecas como React Router. Se definen rutas asociadas a componentes que se renderizan según la URL.</p>
+    <p>Esto permite una experiencia fluida de una sola página (SPA) y mejora el rendimiento al evitar recargas innecesarias.</p>
+  </div>
+
+  <div class="seccion">
+    <h2>Consumo de APIs</h2>
+    <p>Una API (Interfaz de Programación de Aplicaciones) permite conectar nuestro frontend con servicios externos para obtener o enviar información. Es esencial para trabajar con datos en tiempo real.</p>
+    <p>El consumo de APIs se realiza usando funciones como <code>fetch</code> o la librería Axios. Estas herramientas permiten realizar peticiones HTTP (GET, POST, PUT, DELETE) y recibir respuestas en formato JSON.</p>
+  </div>
+
+  <div class="seccion">
+    <h2>Promesas y Async/Await</h2>
+    <p>Las promesas son una forma de manejar operaciones asincrónicas, como el consumo de APIs. Permiten ejecutar código una vez que una tarea se completa con <code>.then()</code> o capturar errores con <code>.catch()</code>.</p>
+    <p><code>async/await</code> es una sintaxis moderna y más legible para trabajar con promesas. Permite escribir código asincrónico de forma secuencial y clara, facilitando el manejo de errores y el flujo de datos.</p>
+  </div>
+
+  <div class="seccion">
+    <h2>Librería Axios</h2>
+    <p>Axios es una librería popular para realizar peticiones HTTP. Su sintaxis es más sencilla que <code>fetch</code> y ofrece ventajas como interceptores de peticiones, manejo automático de JSON y soporte para peticiones cancelables.</p>
+    <p>Axios facilita la integración con APIs RESTful y es ampliamente usada en proyectos React profesionales.</p>
+  </div>
+
+  <div class="botones">
+    <a href="index1.html">Ver ejemplos: Eventos y Renderizado</a>
+    <a href="index2.html">Ver ejemplos: Formularios y API</a>
+  </div>
+  <div class="button-container">
+  <a href="index4.html" class="demo-button">Reflexión</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflexión sobre Tecnologías Web</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      color: #4b2e2e;
+      margin: 0;
+      padding: 2rem;
+    }
+    header {
+      background: linear-gradient(135deg, #f9d5ec, #e0bbf7);
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #7a3e48;
+    }
+    .contenido {
+      margin-top: 2rem;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+    h2 {
+      color: #a05278;
+      margin-top: 1.5rem;
+    }
+    p {
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Eventos, Renderizado y Consumo de API</h1>
+  </header>
+
+  <div class="contenido">
+    <h2>¿Qué aprendí?</h2>
+    <p>
+      Aprendí que el desarrollo de aplicaciones web con un Framework JS como React permite manejar de forma eficiente eventos, como clics de botones, envío de formularios o escritura en campos de entrada, a través de funciones llamadas "manejadores de eventos" (onClick, onChange, onSubmit, etc.). También aprendí a utilizar renderizado condicional para mostrar diferentes elementos o componentes dependiendo del estado de la aplicación, usando operadores como if, ternario ( ? : ) y expresiones lógicas (&&). Del mismo modo, aprendí el renderizado iterativo, útil cuando se desea mostrar listas de elementos (por ejemplo, productos o usuarios), utilizando el método .map() para recorrer arreglos y renderizar componentes dinámicamente.
+    </p>
+    <p>
+      También comprendí la importancia de los formularios en las aplicaciones web, y cómo controlar los inputs a través de componentes controlados, donde el valor del campo está ligado al estado del componente (useState). Aprendí a gestionar formularios usando onChange para actualizar los datos y onSubmit para procesarlos. Otro aspecto importante fue la incorporación de rutas mediante librerías como react-router-dom, lo que permite navegar entre diferentes vistas de la aplicación sin recargar la página, manteniendo una experiencia fluida y moderna. El uso de rutas (Route, Link, useNavigate) es esencial para construir aplicaciones de varias páginas con navegación controlada desde el Front-End.
+    </p>
+
+    <h2>¿Cómo aprendí?</h2>
+    <p>
+      Aprendí principalmente a través de prácticas guiadas y laboratorios donde desarrollé pequeñas aplicaciones que incluían formularios, rutas dinámicas y consumo de datos desde APIs. En este proceso, entendí cómo funciona el consumo de APIs externas, es decir, cómo obtener información desde servidores externos utilizando métodos como fetch o la librería Axios. Aprendí el uso de promesas y funciones async/await, que permiten manejar peticiones asincrónicas de forma más clara y legible. Por ejemplo, al hacer una solicitud a una API para traer información del clima o una lista de usuarios, utilizaba axios.get() dentro de una función async y controlaba errores con bloques try/catch.
+    </p>
+    <p>
+      Durante estos ejercicios, me familiaricé con el ciclo de vida de los componentes, particularmente el uso del hook useEffect para ejecutar funciones cuando el componente se monta o cuando cambian ciertas variables. Esto es muy útil cuando se trabaja con APIs, ya que permite hacer peticiones automáticamente al iniciar un componente. También aprendí a mostrar mensajes de carga (loading...), errores y datos obtenidos de manera dinámica usando renderizado condicional, lo que mejora la experiencia del usuario. En conjunto, estas herramientas me permitieron crear aplicaciones funcionales y modernas, con interfaces que responden a eventos, muestran datos actualizados desde Internet y permiten navegar de forma dinámica sin recargar la página.
+    </p>
+  </div>
+</body>
+</html>

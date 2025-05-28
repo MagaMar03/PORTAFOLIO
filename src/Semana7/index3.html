@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uso de Hooks en React</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      color: #4b2e2e;
+      margin: 0;
+      padding: 2rem;
+    }
+    header {
+      background: linear-gradient(135deg, #f9d5ec, #e0bbf7);
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #e76abe;
+    }
+    .contenido {
+      margin-top: 2rem;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+    h2 {
+      color: #a05278;
+      margin-top: 1.5rem;
+    }
+    p {
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Reflexión: Fundamentos de las Tecnologías Web</h1>
+  </header>
+
+  <div class="contenido">
+    <h2>¿Qué aprendí?</h2>
+    <p>
+      Aprendí que los Hooks en React son funciones especiales que permiten usar el estado y otras características de React sin escribir clases. Uno de los primeros hooks que conocí fue useState, el cual me permite declarar variables de estado dentro de componentes funcionales y actualizar su valor dinámicamente. Luego, aprendí sobre useEffect, que es fundamental para ejecutar efectos secundarios, como peticiones a APIs, temporizadores o sincronizar datos, justo después del renderizado del componente o cuando cambian ciertas variables. Estos dos hooks básicos son la base de la mayoría de las aplicaciones modernas en React.
+    </p>
+    <p>
+      Después, comprendí el uso de otros hooks más avanzados como useContext, que permite compartir datos entre componentes sin tener que pasar props manualmente en cada nivel (ideal para temas como usuarios autenticados, idioma, etc.), y useRef, que me ayudó a acceder directamente a elementos del DOM o a mantener valores persistentes sin causar re-renderizados. También exploré useReducer, útil para manejar estados complejos o múltiples acciones, especialmente en formularios o flujos más elaborados, y useCallback y useMemo, que ayudan a optimizar el rendimiento al memorizar funciones y valores calculados, evitando renders innecesarios. Además, aprendí que es posible crear Hooks personalizados, lo cual me permite encapsular y reutilizar lógica específica de forma más limpia y organizada dentro de mis proyectos.
+    </p>
+
+    <h2>¿Cómo aprendí?</h2>
+    <p>
+      Aprendí los hooks mediante la práctica directa con ejemplos y proyectos pequeños en los que experimenté cómo cada hook afecta el comportamiento de un componente. Por ejemplo, usé useState para manejar la visibilidad de un menú o el contenido de un input, y useEffect para hacer llamadas a APIs al cargar la página. En esos proyectos, pude visualizar cómo el flujo de datos y renderizado depende del estado y cómo usar correctamente las dependencias del hook useEffect para evitar bucles infinitos o efectos innecesarios. Además, la documentación oficial de React y los videos tutoriales me ayudaron a entender casos de uso específicos y buenas prácticas.
+    </p>
+    <p>
+      El aprendizaje de hooks más avanzados como useContext y useReducer se dio al intentar mejorar la estructura de aplicaciones más grandes, donde el paso constante de props se volvía complicado y confuso. En ese momento, entender el Context API y combinarlo con useReducer fue muy útil para centralizar el manejo de estado y acciones. Finalmente, cuando quise evitar cálculos repetitivos o prevenir re-renderizados innecesarios en componentes hijos, aprendí a utilizar useMemo y useCallback, lo que me enseñó también sobre el rendimiento y optimización en React. Crear mis propios hooks personalizados me ayudó a reutilizar lógica compleja como validaciones o temporizadores en distintos componentes, consolidando mi comprensión y habilidades en el uso profesional de hooks.
+    </p>
+  </div>
+</body>
+</html>

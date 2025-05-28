@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejemplos - Eventos y Renderizado</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #fff2f7;
+      color: #333;
+      padding: 30px;
+    }
+    h2 {
+      color: #cc6699;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 192, 203, 0.3);
+    }
+    button {
+      background-color: #f48fb1;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Evento: Contador</h2>
+    <div id="counter"></div>
+  </div>
+
+  <div class="card" id="condicional">
+    <h2>Renderizado Condicional</h2>
+    <div id="auth"></div>
+  </div>
+
+  <div class="card" id="iterativo">
+    <h2>Renderizado Iterativo con Lista</h2>
+    <div id="lista"></div>
+  </div>
+
+  <script>
+    // Contador con evento
+    let count = 0;
+    const counterDiv = document.getElementById("counter");
+    const button = document.createElement("button");
+    button.textContent = "Aumentar Contador";
+    const label = document.createElement("p");
+    const renderCounter = () => {
+      label.textContent = `Valor actual: ${count}`;
+    };
+    button.addEventListener("click", () => {
+      count++;
+      renderCounter();
+    });
+    counterDiv.append(label, button);
+    renderCounter();
+
+    // Renderizado condicional
+    const authDiv = document.getElementById("auth");
+    let isLoggedIn = false;
+    const authText = document.createElement("p");
+    const toggleBtn = document.createElement("button");
+    toggleBtn.textContent = "Iniciar/Cerrar Sesión";
+    const renderAuth = () => {
+      authText.textContent = isLoggedIn ? "Bienvenida, usuaria." : "Por favor, inicia sesión.";
+    };
+    toggleBtn.onclick = () => {
+      isLoggedIn = !isLoggedIn;
+      renderAuth();
+    };
+    authDiv.append(authText, toggleBtn);
+    renderAuth();
+
+    // Renderizado iterativo
+    const listaDiv = document.getElementById("lista");
+    const items = ["Rosado", "Lavanda", "Durazno", "Coral"];
+    const ul = document.createElement("ul");
+    items.forEach(color => {
+      const li = document.createElement("li");
+      li.textContent = `Color pastel favorito: ${color}`;
+      ul.appendChild(li);
+    });
+    listaDiv.appendChild(ul);
+  </script>
+</body>
+</html>

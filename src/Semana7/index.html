@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teoría sobre Hooks en React</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f6;
+      color: #333;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #d63384;
+    }
+    section {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 12px rgba(242, 121, 181, 0.2);
+    }
+    .button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.demo-button {
+  background: linear-gradient(135deg, #f9d5ec, #e0bbf7);
+  color: #da8492;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.demo-button:hover {
+  background: linear-gradient(135deg, #e0bbf7, #f9d5ec);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+  </style>
+</head>
+<body>
+  <h1>Uso de Hooks en React</h1>
+
+  <section>
+    <h2>¿Qué son los Hooks?</h2>
+    <p>Los Hooks son funciones especiales introducidas en React 16.8 que permiten a los desarrolladores usar el estado y otras características de React sin escribir una clase. Proveen una forma funcional y más declarativa de construir componentes complejos, gestionando estados, efectos secundarios, referencias y más.</p>
+    <p>Antes de los Hooks, el manejo del estado y el ciclo de vida en React requería clases, lo cual complicaba la reutilización de lógica. Hoy, los Hooks facilitan escribir código más limpio y compartible.</p>
+  </section>
+
+  <section>
+    <h2>useState</h2>
+    <p>Permite declarar variables de estado dentro de componentes funcionales. Cada llamada a <code>useState</code> devuelve un valor actual y una función para actualizar ese valor.</p>
+    <p>Ideal para contar clics, manejar formularios, alternar temas, etc.</p>
+  </section>
+
+  <section>
+    <h2>useEffect</h2>
+    <p>Permite ejecutar efectos secundarios en componentes, como peticiones a APIs, manipulación del DOM, suscripciones, etc. Reemplaza métodos del ciclo de vida como <code>componentDidMount</code>, <code>componentDidUpdate</code> y <code>componentWillUnmount</code>.</p>
+    <p>Se puede controlar cuándo se ejecuta el efecto mediante un arreglo de dependencias.</p>
+  </section>
+
+  <section>
+    <h2>useContext</h2>
+    <p>Facilita el acceso a datos compartidos (como el idioma, el tema o el usuario autenticado) sin necesidad de pasar props manualmente por cada componente hijo.</p>
+    <p>Se usa junto con <code>React.createContext</code> y un <code>Provider</code>.</p>
+  </section>
+
+  <section>
+    <h2>useRef</h2>
+    <p>Retorna un objeto mutable cuyo valor se mantiene constante durante el ciclo de vida del componente. Es útil para acceder a elementos del DOM directamente o guardar valores persistentes que no provocan re-renderizados.</p>
+    <p>También puede actuar como una especie de almacenamiento temporal.</p>
+  </section>
+
+  <section>
+    <h2>useReducer</h2>
+    <p>Ideal para manejar estados más complejos. Su lógica se basa en reducers similares a Redux. Se recomienda para formularios grandes, gestión de estados múltiples y sistemas de lógica más estructurada.</p>
+    <p>Permite tener una función reductora pura y un estado inicial.</p>
+  </section>
+
+  <section>
+    <h2>useCallback</h2>
+    <p>Devuelve una versión memorizada de una función. Es útil para evitar renderizados innecesarios o pérdida de referencia en componentes hijos cuando se pasan callbacks como props.</p>
+    <p>Ayuda a mejorar el rendimiento cuando hay funciones que se pasan frecuentemente.</p>
+  </section>
+
+  <section>
+    <h2>useMemo</h2>
+    <p>Memoriza el resultado de una función costosa (como cálculos intensos o transformaciones de datos) para evitar recomputaciones innecesarias.</p>
+    <p>Ideal para listas, filtros complejos o transformaciones que dependen de múltiples valores.</p>
+  </section>
+
+  <section>
+    <h2>Hooks Personalizados</h2>
+    <p>Los Hooks personalizados permiten encapsular y reutilizar lógica entre componentes de forma más limpia. Son funciones de JavaScript que pueden usar otros Hooks. Comienzan con "use" por convención.</p>
+    <p>Permiten aislar la lógica de manejo de estado, efectos u otras operaciones para hacer los componentes más legibles y reutilizables.</p>
+  </section>
+    <div class="button-container">
+  <a href="index3.html" class="demo-button">Reflexión</a>
+</div>
+</body>
+</html>
