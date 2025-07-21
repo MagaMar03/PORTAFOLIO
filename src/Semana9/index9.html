@@ -1,120 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arquitecturas Web</title>
+  <meta charset="UTF-8">
+  <title>Arquitectura Web</title>
   <style>
-    /* === ESTILOS GENERALES === */
     body {
       font-family: 'Segoe UI', sans-serif;
+      background-color: #fceef3;
       margin: 0;
-      background: #fff9f9;
+      padding: 0;
       color: #333;
-      line-height: 1.6;
     }
 
-    h1, h2 {
-      text-align: center;
-      color: #c94f7c;
-    }
-
-    p {
-      text-align: justify;
-      max-width: 900px;
-      margin: 0 auto 20px;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
+    header {
+      background-color: #ffb6c1;
       padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 10px;
     }
 
     section {
       margin-bottom: 40px;
     }
 
+    h2 {
+      color: #d6336c;
+      border-bottom: 2px solid #f8c1d9;
+      padding-bottom: 5px;
+    }
+
+    p {
+      text-align: justify;
+      line-height: 1.8;
+    }
+
     .btn-reflexion {
       display: block;
-      margin: 30px auto;
-      padding: 12px 20px;
-      font-size: 16px;
-      background-color: #fbb1c4;
-      color: white;
-      border: none;
+      margin: 40px auto;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      background-color: #ff69b4;
+      color: #fff;
+      text-decoration: none;
       border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s ease;
+      transition: background-color 0.3s;
+      text-align: center;
+      width: max-content;
     }
 
     .btn-reflexion:hover {
-      background-color: #e27a9d;
-    }
-
-    header {
-      background: #ffe6ec;
-      padding: 20px 0;
-      text-align: center;
-      border-bottom: 2px solid #fbcbdc;
+      background-color: #e559a0;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Explorando la Arquitectura Web</h1>
+    <h1>Arquitecturas y Servicios Web</h1>
   </header>
-
-  <div class="container">
+  <main>
     <section>
       <h2>Arquitecturas de las Aplicaciones Web</h2>
-      <p>
-        Las arquitecturas de aplicaciones web definen cómo se estructuran y comunican los componentes de una aplicación. 
-        Algunas arquitecturas comunes son:
-      </p>
-      <p><strong>Arquitectura C/S Clásica – Múltiples Páginas:</strong> El cliente solicita páginas y el servidor las entrega completas. Se recarga toda la página al navegar.</p>
-      <p><strong>Arquitectura C/S Multicapa – Múltiples Páginas:</strong> Separación en capas: presentación, lógica y datos. Permite mayor escalabilidad y mantenimiento.</p>
-      <p><strong>Arquitectura C/S Multicapa – SPA:</strong> Solo se carga una página. Los contenidos se actualizan dinámicamente vía JavaScript, sin recargar toda la web.</p>
-      <p><strong>Arquitectura C/S Multicapa Híbrida (SPA / MPA):</strong> Combinación de múltiples páginas y zonas SPA. Usada en sitios complejos como e-commerce.</p>
-      <p><strong>Arquitectura Hexagonal:</strong> También llamada "Ports and Adapters", separa la lógica central de las interfaces. Alta mantenibilidad.</p>
+      <p>Las arquitecturas de aplicaciones web definen cómo se estructuran las capas de una aplicación para facilitar su desarrollo, mantenimiento y escalabilidad. Una arquitectura bien diseñada permite una mejor distribución de responsabilidades entre cliente, servidor y servicios externos.</p>
+      <p><strong>Arquitectura C/S Clásica - Múltiples Páginas:</strong> En este modelo, cada acción del usuario genera una nueva solicitud al servidor, que responde con una nueva página HTML. Es simple pero menos eficiente en términos de experiencia de usuario.</p>
+      <p><strong>Arquitectura C/S Multicapa - Múltiples Páginas:</strong> Se basa en separar las responsabilidades entre presentación, lógica de negocio y acceso a datos. Cada capa interactúa con la siguiente, favoreciendo la escalabilidad.</p>
+      <p><strong>Arquitectura C/S Multicapa – SPA:</strong> Una SPA (Single Page Application) carga una sola página HTML y actualiza dinámicamente el contenido mediante JavaScript. Esto mejora la velocidad y experiencia del usuario.</p>
+      <p><strong>Arquitectura C/S Multicapa – Híbrida:</strong> Combina las ventajas de las SPA y las aplicaciones tradicionales (MPA), cargando páginas completas cuando es necesario y usando AJAX u otras técnicas para actualizaciones parciales.</p>
+      <p><strong>Arquitectura Hexagonal:</strong> Enfatiza la independencia entre la lógica central de la aplicación y los servicios externos. Esto permite cambiar la base de datos, interfaces o frameworks sin afectar la lógica principal.</p>
     </section>
 
     <section>
-      <h2>Servidores Web / Hosting</h2>
-      <p>
-        Un <strong>servidor web</strong> entrega contenidos al navegador del usuario. Existen opciones de alojamiento como hosting tradicional, servidores virtuales o <strong>cloud hosting</strong> (Amazon, Azure, etc.), que ofrecen escalabilidad automática.
-      </p>
+      <h2>Servidores Web y Hosting</h2>
+      <p>Un servidor web es un software que responde a las solicitudes HTTP enviadas por un navegador. Los servicios de hosting permiten almacenar y servir archivos web al público. Existen opciones como el hosting compartido, servidores dedicados y cloud hosting.</p>
+      <p><strong>Servicio Hosting:</strong> Incluye espacio en un servidor, herramientas para gestión de archivos, bases de datos y correos. Es una opción económica para proyectos pequeños o personales.</p>
+      <p><strong>Cloud Hosting:</strong> Utiliza servidores distribuidos que trabajan en conjunto, ofreciendo mayor disponibilidad, escalabilidad automática y redundancia frente a fallos.</p>
     </section>
 
     <section>
       <h2>Administración de Servidores Web</h2>
-      <p>
-        Involucra registrar y administrar <strong>nombres de dominio</strong> (DNS), y configurar correctamente el servidor web (puertos, acceso, seguridad, etc.).
-      </p>
+      <p>Administrar un servidor web implica configurar servicios, asegurar el acceso, gestionar dominios y garantizar su disponibilidad. La gestión de nombres de dominio es el proceso de vincular un dominio con la IP del servidor donde se aloja el sitio.</p>
+      <p><strong>Gestión de dominio:</strong> Requiere comprar un dominio, asignarlo a un servidor web y configurar los registros DNS (como A, CNAME, MX).</p>
+      <p><strong>Configuración de servidores:</strong> Implica instalar software como Apache o Nginx, configurar puertos, reglas de firewall, certificados SSL y políticas de seguridad.</p>
     </section>
 
     <section>
       <h2>Funcionamiento del Server Side</h2>
-      <p>
-        En el lado servidor (server-side), se ejecuta la lógica del backend (PHP, JSP, Node.js, etc.). Se conecta con bases de datos y procesa peticiones que luego retorna al cliente.
-      </p>
+      <p>El server-side se refiere a los procesos que ocurren en el servidor, como la generación de HTML dinámico, consultas a bases de datos y validaciones. Esto permite entregar contenido personalizado y seguro al cliente.</p>
+      <p>Los lenguajes más comunes son PHP, Node.js, Python (con frameworks como Django o Flask) y Java (con JSP o Spring). Estos lenguajes permiten construir aplicaciones robustas con acceso seguro a datos y lógica de negocio.</p>
     </section>
 
     <section>
-      <h2>Servidor Apache Tomcat con JSP</h2>
-      <p>
-        <strong>Apache Tomcat</strong> es un contenedor de servlets que permite ejecutar páginas JSP. Interpreta el código Java del lado servidor, generando contenido dinámico HTML.
-      </p>
+      <h2>Servidor Apache Tomcat y JSP</h2>
+      <p>Tomcat es un contenedor de servlets y motor de JSP desarrollado por Apache Foundation. Permite ejecutar aplicaciones Java basadas en tecnologías como JSP y Servlets.</p>
+      <p>Con JSP (Java Server Pages), se pueden escribir páginas dinámicas mezclando código HTML y Java, facilitando el desarrollo de interfaces interactivas conectadas a bases de datos.</p>
+      <p>La configuración de Tomcat involucra definir puertos, contextos de aplicación, rutas y variables de entorno en archivos como <code>server.xml</code>.</p>
     </section>
 
     <section>
-      <h2>Gestión de dependencias con Maven</h2>
-      <p>
-        <strong>Maven</strong> es una herramienta de automatización de compilación y gestión de proyectos Java. Facilita agregar librerías externas (dependencias) desde un repositorio central usando un archivo llamado <code>pom.xml</code>.
-      </p>
+      <h2>Gestión de Dependencias con Maven</h2>
+      <p>Maven es una herramienta de automatización de compilación y gestión de dependencias para proyectos Java. Permite incluir bibliotecas externas fácilmente y construir proyectos de forma estandarizada.</p>
+      <p>Usa un archivo <code>pom.xml</code> donde se declaran todas las dependencias, plugins, configuraciones de build y perfiles de ejecución.</p>
+      <p>Maven facilita la integración continua y mejora la portabilidad del proyecto entre distintos entornos de desarrollo.</p>
     </section>
 
-    <a href="reflexion.html" class="btn-reflexion">Ver Reflexión</a>
-  </div>
+    <a href="reflexion.html" class="btn-reflexion">Reflexión</a>
+  </main>
 </body>
 </html>
