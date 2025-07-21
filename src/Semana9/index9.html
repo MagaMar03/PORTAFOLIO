@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arquitecturas Web</title>
+  <style>
+    /* === ESTILOS GENERALES === */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fff9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #c94f7c;
+    }
+
+    p {
+      text-align: justify;
+      max-width: 900px;
+      margin: 0 auto 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .btn-reflexion {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #fbb1c4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-reflexion:hover {
+      background-color: #e27a9d;
+    }
+
+    header {
+      background: #ffe6ec;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 2px solid #fbcbdc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explorando la Arquitectura Web</h1>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>Arquitecturas de las Aplicaciones Web</h2>
+      <p>
+        Las arquitecturas de aplicaciones web definen cómo se estructuran y comunican los componentes de una aplicación. 
+        Algunas arquitecturas comunes son:
+      </p>
+      <p><strong>Arquitectura C/S Clásica – Múltiples Páginas:</strong> El cliente solicita páginas y el servidor las entrega completas. Se recarga toda la página al navegar.</p>
+      <p><strong>Arquitectura C/S Multicapa – Múltiples Páginas:</strong> Separación en capas: presentación, lógica y datos. Permite mayor escalabilidad y mantenimiento.</p>
+      <p><strong>Arquitectura C/S Multicapa – SPA:</strong> Solo se carga una página. Los contenidos se actualizan dinámicamente vía JavaScript, sin recargar toda la web.</p>
+      <p><strong>Arquitectura C/S Multicapa Híbrida (SPA / MPA):</strong> Combinación de múltiples páginas y zonas SPA. Usada en sitios complejos como e-commerce.</p>
+      <p><strong>Arquitectura Hexagonal:</strong> También llamada "Ports and Adapters", separa la lógica central de las interfaces. Alta mantenibilidad.</p>
+    </section>
+
+    <section>
+      <h2>Servidores Web / Hosting</h2>
+      <p>
+        Un <strong>servidor web</strong> entrega contenidos al navegador del usuario. Existen opciones de alojamiento como hosting tradicional, servidores virtuales o <strong>cloud hosting</strong> (Amazon, Azure, etc.), que ofrecen escalabilidad automática.
+      </p>
+    </section>
+
+    <section>
+      <h2>Administración de Servidores Web</h2>
+      <p>
+        Involucra registrar y administrar <strong>nombres de dominio</strong> (DNS), y configurar correctamente el servidor web (puertos, acceso, seguridad, etc.).
+      </p>
+    </section>
+
+    <section>
+      <h2>Funcionamiento del Server Side</h2>
+      <p>
+        En el lado servidor (server-side), se ejecuta la lógica del backend (PHP, JSP, Node.js, etc.). Se conecta con bases de datos y procesa peticiones que luego retorna al cliente.
+      </p>
+    </section>
+
+    <section>
+      <h2>Servidor Apache Tomcat con JSP</h2>
+      <p>
+        <strong>Apache Tomcat</strong> es un contenedor de servlets que permite ejecutar páginas JSP. Interpreta el código Java del lado servidor, generando contenido dinámico HTML.
+      </p>
+    </section>
+
+    <section>
+      <h2>Gestión de dependencias con Maven</h2>
+      <p>
+        <strong>Maven</strong> es una herramienta de automatización de compilación y gestión de proyectos Java. Facilita agregar librerías externas (dependencias) desde un repositorio central usando un archivo llamado <code>pom.xml</code>.
+      </p>
+    </section>
+
+    <a href="reflexion.html" class="btn-reflexion">Ver Reflexión</a>
+  </div>
+</body>
+</html>
